@@ -29,10 +29,10 @@ import datetime
 # clientid = config.reddit_reddit_clientid
 # clientsecret = config.reddit_clientsecret
 
-username = st.secrets["reddit_username"]
-password = st.secrets["reddit_password"]
-clientid = st.secrets["reddit_clientid"]
-clientsecret = st.secrets["reddit_clientsecret"]
+# username = st.secrets["reddit_username"]
+# password = st.secrets["reddit_password"]
+# clientid = st.secrets["reddit_clientid"]
+# clientsecret = st.secrets["reddit_clientsecret"]
 
 #################Twitter_AUTH##########################
 # API_Key = config.twitter_API_Key 
@@ -41,11 +41,11 @@ clientsecret = st.secrets["reddit_clientsecret"]
 # Access_Token = config.twitter_Access_Token
 # Access_Token_Secret = config.twitter_Access_Token_Secret
 
-API_Key = st.secrets["twitter_API_Key"]
-API_Key_Secret = st.secrets["twitter_API_Key_Secret"]
-Bearer_Token = st.secrets["twitter_Bearer_Token"]
-Access_Token = st.secrets["twitter_Access_Token"]
-Access_Token_Secret = st.secrets["twitter_Access_Token_Secret"]
+# API_Key = st.secrets["twitter_API_Key"]
+# API_Key_Secret = st.secrets["twitter_API_Key_Secret"]
+# Bearer_Token = st.secrets["twitter_Bearer_Token"]
+# Access_Token = st.secrets["twitter_Access_Token"]
+# Access_Token_Secret = st.secrets["twitter_Access_Token_Secret"]
 
 ###################Database_AUTH#########################
 # host= config.host
@@ -54,29 +54,29 @@ Access_Token_Secret = st.secrets["twitter_Access_Token_Secret"]
 # port = config.port
 # database = config.database
 
-host= st.secrets["host"]
-user= st.secrets["user"]
-db_password= st.secrets["password"]
-port = st.secrets["port"]
-database = st.secrets["database"]
+# host= st.secrets["host"]
+# user= st.secrets["user"]
+# db_password= st.secrets["password"]
+# port = st.secrets["port"]
+# database = st.secrets["database"]
 
 ################################################################################################################
 
-#Twitter API Authentication
-consumerKey = API_Key
-consumerSecret = API_Key_Secret
-accessToken = Access_Token
-accessTokenSecret = Access_Token_Secret
-auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
-auth.set_access_token(accessToken, accessTokenSecret)
-api = tweepy.API(auth,wait_on_rate_limit=True)
+# #Twitter API Authentication
+# consumerKey = API_Key
+# consumerSecret = API_Key_Secret
+# accessToken = Access_Token
+# accessTokenSecret = Access_Token_Secret
+# auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
+# auth.set_access_token(accessToken, accessTokenSecret)
+# api = tweepy.API(auth,wait_on_rate_limit=True)
 
-#Reddit API Authentication
-reddit = praw.Reddit(client_id=clientid,
-                     client_secret=clientsecret,
-                     password=password,
-                     user_agent='Reddit search data extractor by /u/' + username + '',
-                     username=username)
+# #Reddit API Authentication
+# reddit = praw.Reddit(client_id=clientid,
+#                      client_secret=clientsecret,
+#                      password=password,
+#                      user_agent='Reddit search data extractor by /u/' + username + '',
+#                      username=username)
 
 ################################################################################################################
 import pickle as pkle
@@ -116,7 +116,7 @@ if choose == "About the Project":
     with col2:
         st.markdown(" <h1 style='text-align: center;'> NHANES, Health Disparities Data Visualization Tool</h1>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center;'><i><b>Transformative Research to Address Health Disparities and Advance Health Equity at Minority Serving Institutions</b></i></p>", unsafe_allow_html=True)
-        st.markdown("<center><img src='https://github.com/kkrusere/NHANES-Data-Visualization-Dashboard-on-Health-Disparities-and-Inequities/blob/main/assets/health_disparities.jpg?raw=true' width=600/></center>", unsafe_allow_html=True)
+        st.markdown("<center><img src='https://github.com/kkrusere/NHANES-EDA-on-Health-Disparities/blob/main/assets/nhanes_health_disparities.png?raw=true' width=600/></center>", unsafe_allow_html=True)
 
     with col3:
         st.write("")
